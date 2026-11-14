@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e0d">
+  <meta name="description" content="devGreenPink — developer portfolio, selected projects, and tools.">
+  <title>devGreenPink — Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:dark;--bg:#090e0d;--panel:#101816;--line:#1d2b26;--text:#e7f1ec;--muted:#91a49a;--green:#34d399;--cyan:#22d3ee}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 0%,#123126 0,transparent 38%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1060px,calc(100% - 40px));margin:auto}
+    header{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff0d}
+    .brand{font:500 15px 'DM Mono',monospace;letter-spacing:-.5px}.brand b{color:var(--green)}nav{display:flex;gap:26px;color:var(--muted);font-size:13px}nav a:hover,.text-link:hover{color:var(--green)}
+    .hero{padding:112px 0 94px;max-width:800px}.eyebrow{font:12px 'DM Mono',monospace;color:var(--green);letter-spacing:2px;text-transform:uppercase}
+    h1{font-size:clamp(46px,8vw,82px);line-height:1.08;letter-spacing:-5px;margin:20px 0 22px}h1 span{color:var(--green)}
+    .intro{max-width:610px;color:var(--muted);font-size:17px}.actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+    .btn{border:1px solid var(--line);padding:11px 17px;border-radius:8px;font-size:13px;font-weight:700}.btn.primary{background:var(--green);color:#062016;border-color:var(--green)}.btn:hover{transform:translateY(-2px);transition:.2s}
+    section{padding:54px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:24px}.kicker{font:11px 'DM Mono',monospace;color:var(--cyan);letter-spacing:1.8px;text-transform:uppercase}h2{font-size:27px;letter-spacing:-1px;margin:5px 0 0}.muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.project{background:linear-gradient(145deg,#13201b,#0e1513);border:1px solid var(--line);border-radius:13px;padding:24px;min-height:218px;display:flex;flex-direction:column}
+    .project:hover{border-color:#34d39970;transform:translateY(-3px);transition:.2s}.project-top{display:flex;justify-content:space-between;color:var(--green);font:11px 'DM Mono',monospace}.project h3{font-size:19px;margin:22px 0 8px}.project p{font-size:13px;color:var(--muted);margin:0 0 20px}.project a{margin-top:auto;font-size:12px;color:var(--green)}
+    .stack{display:flex;gap:9px;flex-wrap:wrap}.chip{border:1px solid var(--line);background:#101816;border-radius:7px;padding:9px 12px;color:#c2d2c9;font:12px 'DM Mono',monospace}
+    .about{max-width:700px;color:var(--muted)}footer{border-top:1px solid #ffffff0d;padding:28px 0 38px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:650px){nav{gap:13px;font-size:11px}.hero{padding:78px 0 55px}h1{letter-spacing:-3px}.grid{grid-template-columns:1fr}.section-head{align-items:start;gap:10px;flex-direction:column}footer{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#"><b>◆</b> devGreenPink</a>
+      <nav><a href="#projects">Projects</a><a href="#about">About</a><a href="https://github.com/devGreenPink">GitHub ↗</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Developer portfolio · 2026</div>
+        <h1>Building useful<br><span>things with code.</span></h1>
+        <p class="intro">Hey, I'm devGreenPink. I build web applications and practical developer tools, focusing on thoughtful details, simple experiences, and solving real problems.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore projects ↓</a>
+          <a class="btn" href="https://github.com/devGreenPink">GitHub profile ↗</a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head"><div><div class="kicker">Selected work</div><h2>Things I've built</h2></div><span class="muted" style="font-size:12px">A few projects from my GitHub</span></div>
+        <div class="grid">
+          <article class="project">
+            <div class="project-top"><span>01 / DEVELOPER TOOLS</span><span>↗</span></div>
+            <h3>อีสาน Dev Tools</h3>
+            <p>A browser-based toolkit with 40 developer utilities across 7 categories. Designed to work client-side, with no backend required.</p>
+            <a href="https://devgreenpink.github.io/dev-utility-toolkit/">Open live project ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-top"><span>02 / LEARNING · PWA</span><span>↗</span></div>
+            <h3>3xxx-Words</h3>
+            <p>An English vocabulary learning app with login, responsive UI, installable PWA support, and offline caching.</p>
+            <a href="https://devgreenpink.github.io/vocab-learning-app/">Open live project ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-top"><span>03 / ANGULAR</span><span>↗</span></div>
+            <h3>Trading Journal UI</h3>
+            <p>An Angular 17 frontend project exploring a dedicated interface for keeping a trading journal.</p>
+            <a href="https://github.com/devGreenPink/trading-journal-ui">View repository ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-top"><span>04 / MORE EXPERIMENTS</span><span>↗</span></div>
+            <h3>More on GitHub</h3>
+            <p>Experiments, learning projects, and small utilities. Browse the repositories to see what I'm exploring next.</p>
+            <a href="https://github.com/devGreenPink?tab=repositories">Browse repositories ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="kicker">A little about me</div><h2>Curious by default.</h2>
+        <p class="about">I enjoy moving between frontend and backend ideas, learning new technologies, and turning repetitive tasks into useful tools. I believe good software should feel clear, practical, and pleasant to use.</p>
+        <div class="stack" aria-label="Technologies"><span class="chip">Java</span><span class="chip">Quarkus</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">Git</span><span class="chip">Firebase</span></div>
+      </section>
+    </main>
+    <footer><span>© <span id="year"></span> devGreenPink</span><span>Designed with care <span style="color:var(--green)">✳</span></span></footer>
+  </div>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>

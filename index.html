@@ -4,14 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080d0c">
-  <meta name="description" content="devGreenPink — developer portfolio featuring practical web apps, developer tools, and experiments.">
+  <meta name="description" content="devGreenPink — developer portfolio featuring practical web apps, developer tools, and experiments. พอร์ตโฟลิโอนักพัฒนา: เว็บแอปที่ใช้ได้จริง เครื่องมือนักพัฒนา และงานทดลอง">
   <meta name="google-site-verification" content="lv9g-TBGbQlJCXwNi2AEU6Iw9p6siHQ69-h7Q2i-qOc" />
   <title>devGreenPink — Creative Developer Portfolio</title>
+  <script>try{var l=localStorage.getItem('lang');document.documentElement.lang=(l==='th'||l==='en')?l:((navigator.language||'').toLowerCase().indexOf('th')===0?'th':'en')}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--bg:#080d0c;--panel:#101916;--panel2:#14221c;--line:rgba(179,226,203,.13);--text:#eaf5ef;--muted:#91a69a;--green:#6af0b6;--green2:#34d399;--cyan:#63d9e8;--mono:"DM Mono",monospace;--sans:Manrope,system-ui,sans-serif}
+    :root{color-scheme:dark;--bg:#080d0c;--panel:#101916;--panel2:#14221c;--line:rgba(179,226,203,.13);--text:#eaf5ef;--muted:#91a69a;--green:#6af0b6;--green2:#34d399;--cyan:#63d9e8;--mono:"DM Mono","IBM Plex Sans Thai",monospace;--sans:Manrope,"IBM Plex Sans Thai",system-ui,sans-serif}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;scroll-padding-top:90px}
     body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;overflow-x:hidden}
@@ -121,44 +122,58 @@
     @media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto;padding:85px 0 90px}.hero-art{min-height:390px;grid-row:1}.hero-copy{grid-row:2}.scroll-cue{bottom:30px}.project-grid{grid-template-columns:1fr 1fr}.project.featured{grid-row:auto;grid-column:span 2;min-height:550px}.about-layout{gap:28px}}
     @media(max-width:620px){.wrap{width:min(100% - 32px,1160px)}.site-header{height:68px}nav{gap:14px;font-size:10px}nav a:nth-child(2){display:none}.nav-cta{padding:7px 9px}.hero{padding:65px 0 70px;gap:5px}.hero-art{min-height:300px;transform:scale(.83);margin:-22px 0}.orbit{width:330px;height:190px}.orbit.two{width:350px;height:225px}.core{width:140px;height:140px;border-radius:30px}.core-mark{font-size:60px}.tag-one{right:-2%}.tag-two{left:-3%}h1{font-size:clamp(45px,13vw,68px);letter-spacing:-.075em}.hero-desc{font-size:14px}.hero-meta{gap:13px;margin-top:30px}.content-section{padding:72px 0!important}.section-top{align-items:start;flex-direction:column;margin-bottom:24px}.section-note{text-align:left}.project-grid{grid-template-columns:1fr}.project.featured{grid-column:auto;min-height:500px}.project{min-height:390px}.featured .preview{min-height:260px}.about-layout{grid-template-columns:1fr;gap:24px}.about-stamp{min-height:190px}.contact{padding:26px;align-items:flex-start;flex-direction:column}.contact .btn{width:100%}footer{margin-top:65px;align-items:flex-start;flex-direction:column}.spotlight{display:none}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+    /* language switch (TH / EN) */
+    .lang-toggle{display:inline-flex;align-items:center;gap:2px;padding:3px;border:1px solid var(--line);border-radius:7px;background:transparent;color:#a4b7ac;font:10px var(--mono);letter-spacing:.5px;cursor:pointer}
+    .lang-toggle span{padding:5px 7px;border-radius:5px;transition:background .2s,color .2s}
+    .lang-toggle span.on{background:rgba(106,240,182,.13);color:var(--green)}
+    .lang-toggle:hover{border-color:rgba(106,240,182,.45)}
+    .lang-toggle:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+    /* Thai: tone marks need room above and below; tight Latin tracking squeezes Thai letters */
+    :lang(th) h1{font-size:clamp(40px,5.6vw,70px);line-height:1.28;letter-spacing:-.01em}
+    :lang(th) h1 .line{white-space:normal}
+    :lang(th) h2{letter-spacing:-.01em;line-height:1.35}
+    :lang(th) .project h3{letter-spacing:0}
+    :lang(th) .hero-desc,:lang(th) .project p,:lang(th) .about-copy p{line-height:1.95}
+    :lang(th) .eyebrow,:lang(th) .hero-meta,:lang(th) .section-label,:lang(th) .scroll-cue,:lang(th) .ticker-track{letter-spacing:.4px}
+    @media(max-width:620px){:lang(th) h1{font-size:clamp(36px,10vw,52px)}.lang-toggle span{padding:4px 6px}}
   </style>
 </head>
 <body>
   <div class="spotlight" aria-hidden="true"></div>
   <div class="wrap">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="devGreenPink home"><span class="brand-mark">◆</span><b>devGreenPink</b></a>
-      <nav aria-label="Main navigation"><a href="#projects">Projects</a><a href="#about">About</a><a class="nav-cta" href="https://github.com/devGreenPink" target="_blank" rel="noreferrer">GitHub ↗</a></nav>
+      <a class="brand" href="#top" aria-label="devGreenPink home" data-i18n-aria="homeLabel"><span class="brand-mark">◆</span><b>devGreenPink</b></a>
+      <nav aria-label="Main navigation" data-i18n-aria="navLabel"><a href="#projects" data-i18n="navProjects">Projects</a><a href="#about" data-i18n="navAbout">About</a><a class="nav-cta" href="https://github.com/devGreenPink" target="_blank" rel="noreferrer">GitHub ↗</a><button class="lang-toggle" type="button" id="lang-toggle" aria-label="เปลี่ยนเป็นภาษาไทย"><span data-l="th">TH</span><span data-l="en">EN</span></button></nav>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="pulse"></span> Developer portfolio · 2026</div>
-          <h1><span class="line">Ideas into</span><span class="line gradient">useful things.</span><span class="line">Built with code<span style="color:var(--green)">_</span></span></h1>
-          <p class="hero-desc">Hey, I'm devGreenPink. I build practical web experiences and developer tools — blending thoughtful engineering with interfaces that feel simple, clear, and enjoyable to use.</p>
+          <div class="eyebrow"><span class="pulse"></span> <span data-i18n="eyebrow">Developer portfolio · 2026</span></div>
+          <h1><span class="line" data-i18n="h1a">Ideas into</span><span class="line gradient" data-i18n="h1b">useful things.</span><span class="line"><span data-i18n="h1c">Built with code</span><span style="color:var(--green)">_</span></span></h1>
+          <p class="hero-desc" data-i18n="heroDesc">Hey, I'm devGreenPink. I build practical web experiences and developer tools — blending thoughtful engineering with interfaces that feel simple, clear, and enjoyable to use.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
-            <a class="btn" href="https://github.com/devGreenPink" target="_blank" rel="noreferrer">Visit GitHub <span aria-hidden="true">↗</span></a>
+            <a class="btn primary" href="#projects"><span data-i18n="ctaWork">Explore my work</span> <span aria-hidden="true">↘</span></a>
+            <a class="btn" href="https://github.com/devGreenPink" target="_blank" rel="noreferrer"><span data-i18n="ctaGithub">Visit GitHub</span> <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="hero-meta"><span>Frontend & Backend</span><span>Tools & Experiments</span><span>Always learning</span></div>
+          <div class="hero-meta"><span>Frontend & Backend</span><span data-i18n="metaTools">Tools & Experiments</span><span data-i18n="metaLearning">Always learning</span></div>
         </div>
-        <div class="hero-art" aria-label="Abstract animated developer-inspired graphic">
+        <div class="hero-art" aria-label="Abstract animated developer-inspired graphic" data-i18n-aria="artLabel">
           <div class="orb-glow"></div><div class="orbit"></div><div class="orbit two"></div>
           <div class="core"><div class="core-mark">&lt;/&gt;</div></div>
           <div class="float-tag tag-one"><b>01</b> / CREATE</div>
           <div class="float-tag tag-two"><b>02</b> / EXPLORE</div>
           <div class="float-tag tag-three">BUILD · LEARN · REPEAT</div>
         </div>
-        <div class="scroll-cue">SCROLL TO EXPLORE</div>
+        <div class="scroll-cue" data-i18n="scrollCue">SCROLL TO EXPLORE</div>
       </section>
     </main>
   </div>
 
-  <div class="ticker" aria-label="Areas of interest">
+  <div class="ticker" aria-label="Areas of interest" data-i18n-aria="tickerLabel">
     <div class="ticker-track">
-      <span>Developer tools</span><i>✳</i><span>Web experiences</span><i>✳</i><span>Useful by design</span><i>✳</i><span>Frontend / Backend</span><i>✳</i><span>Build · Learn · Improve</span><i>✳</i>
-      <span>Developer tools</span><i>✳</i><span>Web experiences</span><i>✳</i><span>Useful by design</span><i>✳</i><span>Frontend / Backend</span><i>✳</i><span>Build · Learn · Improve</span><i>✳</i>
+      <span data-i18n="t1">Developer tools</span><i>✳</i><span data-i18n="t2">Web experiences</span><i>✳</i><span data-i18n="t3">Useful by design</span><i>✳</i><span>Frontend / Backend</span><i>✳</i><span data-i18n="t5">Build · Learn · Improve</span><i>✳</i>
+      <span data-i18n="t1">Developer tools</span><i>✳</i><span data-i18n="t2">Web experiences</span><i>✳</i><span data-i18n="t3">Useful by design</span><i>✳</i><span>Frontend / Backend</span><i>✳</i><span data-i18n="t5">Build · Learn · Improve</span><i>✳</i>
     </div>
   </div>
 
@@ -166,13 +181,13 @@
     <main>
       <section class="content-section" id="projects">
         <div class="section-top reveal">
-          <div><div class="section-label">01 / Selected work</div><h2>Small ideas.<br><span class="gradient">Useful outcomes.</span></h2></div>
-          <p class="section-note">A collection of public projects built to solve real, everyday problems.</p>
+          <div><div class="section-label" data-i18n="workLabel">01 / Selected work</div><h2><span data-i18n="workH2a">Small ideas.</span><br><span class="gradient" data-i18n="workH2b">Useful outcomes.</span></h2></div>
+          <p class="section-note" data-i18n="workNote">A collection of public projects built to solve real, everyday problems.</p>
         </div>
 
         <div class="project-grid">
           <article class="project featured reveal">
-            <div class="project-head"><span class="project-index">PROJECT 01 — FEATURED</span><span class="project-kind">DEVELOPER TOOLS</span></div>
+            <div class="project-head"><span class="project-index" data-i18n="p1Index">PROJECT 01 — FEATURED</span><span class="project-kind" data-i18n="p1Kind">DEVELOPER TOOLS</span></div>
             <div class="preview">
               <div class="mock-window">
                 <div class="window-bar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="window-url">isan-dev-tools / workspace</span></div>
@@ -181,35 +196,35 @@
             </div>
             <div class="project-info">
               <div class="project-title-row"><h3>อีสาน Dev Tools</h3><span class="arrow-circle" aria-hidden="true">↗</span></div>
-              <p>A browser-based developer toolkit with 40 utilities across 7 categories. Fast, practical, and designed to work client-side — no backend required.</p>
-              <a class="project-link" href="https://devgreenpink.github.io/dev-utility-toolkit/" target="_blank" rel="noreferrer">OPEN LIVE PROJECT <span>↗</span></a>
-              <div class="project-tags"><span>40 UTILITIES</span><span>7 CATEGORIES</span><span>CLIENT-SIDE</span></div>
+              <p data-i18n="p1Desc">A browser-based developer toolkit with 40 utilities across 7 categories. Fast, practical, and designed to work client-side — no backend required.</p>
+              <a class="project-link" href="https://devgreenpink.github.io/dev-utility-toolkit/" target="_blank" rel="noreferrer"><span data-i18n="openLive">OPEN LIVE PROJECT</span> <span>↗</span></a>
+              <div class="project-tags"><span data-i18n="p1Tag1">40 UTILITIES</span><span data-i18n="p1Tag2">7 CATEGORIES</span><span data-i18n="p1Tag3">CLIENT-SIDE</span></div>
             </div>
           </article>
 
           <article class="project reveal">
-            <div class="project-head"><span class="project-index">PROJECT 02</span><span class="project-kind">PEER-TO-PEER · PWA</span></div>
+            <div class="project-head"><span class="project-index" data-i18n="p2Index">PROJECT 02</span><span class="project-kind">PEER-TO-PEER · PWA</span></div>
             <div class="preview">
               <div class="nearby-ui"><div class="device"><b>▣</b><span>DEVICE A</span></div><div class="signal"></div><div class="device"><b>▣</b><span>DEVICE B</span></div></div>
             </div>
             <div class="project-info">
-              <div class="project-title-row"><h3>Nearby</h3><span class="arrow-circle" aria-hidden="true">↗</span></div>
-              <p>Share files and text directly between nearby devices in the browser — no install, no account, no file uploads.</p>
-              <a class="project-link" href="https://devgreenpink.github.io/nearby/" target="_blank" rel="noreferrer">OPEN LIVE PROJECT <span>↗</span></a>
-              <div class="project-tags"><span>PEER-TO-PEER</span><span>NO UPLOADS</span></div>
+              <div class="project-title-row"><h3 data-i18n="p2Title">Nearby — cross-device file sharing</h3><span class="arrow-circle" aria-hidden="true">↗</span></div>
+              <p data-i18n="p2Desc">Send files, photos and messages between iPhone, Android and computers right in the browser — no app to install, no account, nothing uploaded to a server. Works on the same Wi-Fi or anywhere with a room code, with a chat for each device.</p>
+              <a class="project-link" href="https://devgreenpink.github.io/nearby/" target="_blank" rel="noreferrer"><span data-i18n="openLive">OPEN LIVE PROJECT</span> <span>↗</span></a>
+              <div class="project-tags"><span>PEER-TO-PEER</span><span data-i18n="p2Tag2">NO UPLOADS</span><span>IPHONE ↔ ANDROID</span><span data-i18n="p2Tag4">CHAT</span></div>
             </div>
           </article>
 
           <article class="project reveal">
-            <div class="project-head"><span class="project-index">PROJECT 03</span><span class="project-kind">LEARNING · PWA</span></div>
+            <div class="project-head"><span class="project-index" data-i18n="p3Index">PROJECT 03</span><span class="project-kind" data-i18n="p3Kind">LEARNING · PWA</span></div>
             <div class="preview">
               <div class="word-ui"><div class="word-top"><span>DAILY VOCABULARY</span><span>03 / 10</span></div><div class="word-term">Curious</div><div class="word-pron">/ˈkjʊr.i.əs/</div><div class="word-meaning"></div><div class="word-meaning short"></div></div>
             </div>
             <div class="project-info">
               <div class="project-title-row"><h3>3xxx-Words</h3><span class="arrow-circle" aria-hidden="true">↗</span></div>
-              <p>An English vocabulary learning PWA with login, responsive design, and offline support.</p>
-              <a class="project-link" href="https://devgreenpink.github.io/vocab-learning-app/" target="_blank" rel="noreferrer">OPEN LIVE PROJECT <span>↗</span></a>
-              <div class="project-tags"><span>VOCABULARY</span><span>OFFLINE SUPPORT</span></div>
+              <p data-i18n="p3Desc">An English vocabulary learning PWA with login, responsive design, and offline support.</p>
+              <a class="project-link" href="https://devgreenpink.github.io/vocab-learning-app/" target="_blank" rel="noreferrer"><span data-i18n="openLive">OPEN LIVE PROJECT</span> <span>↗</span></a>
+              <div class="project-tags"><span data-i18n="p3Tag1">VOCABULARY</span><span data-i18n="p3Tag2">OFFLINE SUPPORT</span></div>
             </div>
           </article>
         </div>
@@ -219,26 +234,114 @@
         <div class="about-layout">
           <div class="about-stamp reveal" aria-hidden="true"><div class="stamp-text">&lt;dev/&gt;</div></div>
           <div class="about-copy reveal">
-            <div class="section-label">02 / A little about me</div>
-            <h2>Curious by default.<br><span class="gradient">Builder by nature.</span></h2>
-            <p>I enjoy moving between frontend and backend ideas, learning new technologies, and turning repetitive tasks into useful tools. I believe good software should feel clear, practical, and pleasant to use.</p>
-            <div class="stack" aria-label="Technologies"><span class="chip">Java</span><span class="chip">Quarkus</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">Git</span><span class="chip">Firebase</span></div>
+            <div class="section-label" data-i18n="aboutLabel">02 / A little about me</div>
+            <h2><span data-i18n="aboutH2a">Curious by default.</span><br><span class="gradient" data-i18n="aboutH2b">Builder by nature.</span></h2>
+            <p data-i18n="aboutDesc">I enjoy moving between frontend and backend ideas, learning new technologies, and turning repetitive tasks into useful tools. I believe good software should feel clear, practical, and pleasant to use.</p>
+            <div class="stack" aria-label="Technologies" data-i18n-aria="stackLabel"><span class="chip">Java</span><span class="chip">Quarkus</span><span class="chip">Angular</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">Git</span><span class="chip">Firebase</span></div>
           </div>
         </div>
       </section>
 
       <section class="reveal">
         <div class="contact">
-          <div><div class="section-label">03 / Find me online</div><h2>Let's build something<br><span class="gradient">useful together.</span></h2><p>Want to explore my code, follow what I'm building, or just say hello?</p></div>
-          <a class="btn primary" href="https://github.com/devGreenPink" target="_blank" rel="noreferrer">Connect on GitHub ↗</a>
+          <div><div class="section-label" data-i18n="contactLabel">03 / Find me online</div><h2><span data-i18n="contactH2a">Let's build something</span><br><span class="gradient" data-i18n="contactH2b">useful together.</span></h2><p data-i18n="contactDesc">Want to explore my code, follow what I'm building, or just say hello?</p></div>
+          <a class="btn primary" href="https://github.com/devGreenPink" target="_blank" rel="noreferrer"><span data-i18n="contactBtn">Connect on GitHub</span> ↗</a>
         </div>
       </section>
     </main>
 
-    <footer><span>© <span id="year"></span> devGreenPink <span style="color:var(--green)">✳</span> Built with curiosity.</span><div class="footer-links"><a href="#top">Back to top ↑</a><a href="https://github.com/devGreenPink" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
+    <footer><span>© <span id="year"></span> devGreenPink <span style="color:var(--green)">✳</span> <span data-i18n="builtWith">Built with curiosity.</span></span><div class="footer-links"><a href="#top"><span data-i18n="backTop">Back to top</span> ↑</a><a href="https://github.com/devGreenPink" target="_blank" rel="noreferrer">GitHub ↗</a></div></footer>
   </div>
 
   <script>
+    // ---- two languages: Thai / English (picked from the device, remembered once chosen) ----
+    const I18N = {
+      en: {
+        title: 'devGreenPink — Creative Developer Portfolio',
+        switchTo: 'เปลี่ยนเป็นภาษาไทย',
+        homeLabel: 'devGreenPink home', navLabel: 'Main navigation', navProjects: 'Projects', navAbout: 'About',
+        eyebrow: 'Developer portfolio · 2026',
+        h1a: 'Ideas into', h1b: 'useful things.', h1c: 'Built with code',
+        heroDesc: "Hey, I'm devGreenPink. I build practical web experiences and developer tools — blending thoughtful engineering with interfaces that feel simple, clear, and enjoyable to use.",
+        ctaWork: 'Explore my work', ctaGithub: 'Visit GitHub',
+        metaTools: 'Tools & Experiments', metaLearning: 'Always learning',
+        artLabel: 'Abstract animated developer-inspired graphic', scrollCue: 'SCROLL TO EXPLORE',
+        tickerLabel: 'Areas of interest', t1: 'Developer tools', t2: 'Web experiences', t3: 'Useful by design', t5: 'Build · Learn · Improve',
+        workLabel: '01 / Selected work', workH2a: 'Small ideas.', workH2b: 'Useful outcomes.',
+        workNote: 'A collection of public projects built to solve real, everyday problems.',
+        openLive: 'OPEN LIVE PROJECT',
+        p1Index: 'PROJECT 01 — FEATURED', p1Kind: 'DEVELOPER TOOLS',
+        p1Desc: 'A browser-based developer toolkit with 40 utilities across 7 categories. Fast, practical, and designed to work client-side — no backend required.',
+        p1Tag1: '40 UTILITIES', p1Tag2: '7 CATEGORIES', p1Tag3: 'CLIENT-SIDE',
+        p2Index: 'PROJECT 02', p2Title: 'Nearby — cross-device file sharing',
+        p2Desc: 'Send files, photos and messages between iPhone, Android and computers right in the browser — no app to install, no account, nothing uploaded to a server. Works on the same Wi-Fi or anywhere with a room code, with a chat for each device.',
+        p2Tag2: 'NO UPLOADS', p2Tag4: 'CHAT',
+        p3Index: 'PROJECT 03', p3Kind: 'LEARNING · PWA',
+        p3Desc: 'An English vocabulary learning PWA with login, responsive design, and offline support.',
+        p3Tag1: 'VOCABULARY', p3Tag2: 'OFFLINE SUPPORT',
+        aboutLabel: '02 / A little about me', aboutH2a: 'Curious by default.', aboutH2b: 'Builder by nature.',
+        aboutDesc: 'I enjoy moving between frontend and backend ideas, learning new technologies, and turning repetitive tasks into useful tools. I believe good software should feel clear, practical, and pleasant to use.',
+        stackLabel: 'Technologies',
+        contactLabel: '03 / Find me online', contactH2a: "Let's build something", contactH2b: 'useful together.',
+        contactDesc: "Want to explore my code, follow what I'm building, or just say hello?", contactBtn: 'Connect on GitHub',
+        builtWith: 'Built with curiosity.', backTop: 'Back to top',
+      },
+      th: {
+        title: 'devGreenPink — พอร์ตโฟลิโอนักพัฒนา',
+        switchTo: 'Switch to English',
+        homeLabel: 'หน้าแรก devGreenPink', navLabel: 'เมนูหลัก', navProjects: 'ผลงาน', navAbout: 'เกี่ยวกับ',
+        eyebrow: 'พอร์ตโฟลิโอนักพัฒนา · 2026',
+        h1a: 'จากไอเดีย', h1b: 'สู่ของใช้ได้จริง', h1c: 'สร้างด้วยโค้ด',
+        heroDesc: 'สวัสดี! devGreenPink เองนะ ชอบสร้างเว็บที่ใช้งานได้จริงและเครื่องมือสำหรับนักพัฒนา ผสมงานเขียนโค้ดที่คิดมาอย่างดีเข้ากับหน้าตาที่เรียบง่าย ชัดเจน และใช้แล้วสนุก',
+        ctaWork: 'ดูผลงาน', ctaGithub: 'ไปที่ GitHub',
+        metaTools: 'เครื่องมือและการทดลอง', metaLearning: 'เรียนรู้ไม่หยุด',
+        artLabel: 'ภาพกราฟิกเคลื่อนไหวแนวนักพัฒนา', scrollCue: 'เลื่อนลงเพื่อดูต่อ',
+        tickerLabel: 'สิ่งที่สนใจ', t1: 'เครื่องมือนักพัฒนา', t2: 'ประสบการณ์บนเว็บ', t3: 'ออกแบบให้ใช้ได้จริง', t5: 'สร้าง · เรียนรู้ · พัฒนา',
+        workLabel: '01 / ผลงานที่คัดมา', workH2a: 'ไอเดียเล็ก ๆ', workH2b: 'ผลลัพธ์ที่ใช้ได้จริง',
+        workNote: 'รวมโปรเจกต์สาธารณะที่สร้างขึ้นเพื่อแก้ปัญหาจริงในชีวิตประจำวัน',
+        openLive: 'เปิดใช้งานจริง',
+        p1Index: 'โปรเจกต์ 01 — แนะนำ', p1Kind: 'เครื่องมือนักพัฒนา',
+        p1Desc: 'ชุดเครื่องมือนักพัฒนาบนเบราว์เซอร์ 40 อย่าง ใน 7 หมวด เร็ว ใช้งานได้จริง และทำงานบนเครื่องผู้ใช้ทั้งหมด ไม่ต้องมี backend',
+        p1Tag1: '40 เครื่องมือ', p1Tag2: '7 หมวด', p1Tag3: 'ทำงานบนเบราว์เซอร์',
+        p2Index: 'โปรเจกต์ 02', p2Title: 'Nearby — ส่งไฟล์ข้ามเครื่อง',
+        p2Desc: 'ส่งไฟล์ รูป และข้อความ ระหว่าง iPhone, Android และคอม ได้ในเบราว์เซอร์ ไม่ต้องลงแอป ไม่ต้องมีบัญชี ไม่อัปโหลดขึ้นเซิร์ฟเวอร์ ใช้ได้ทั้งใน Wi-Fi เดียวกัน หรือที่ไหนก็ได้ด้วยรหัสห้อง และมีแชตแยกแต่ละเครื่อง',
+        p2Tag2: 'ไม่อัปโหลด', p2Tag4: 'มีแชต',
+        p3Index: 'โปรเจกต์ 03', p3Kind: 'การเรียนรู้ · PWA',
+        p3Desc: 'แอป PWA ฝึกคำศัพท์ภาษาอังกฤษ มีระบบล็อกอิน ใช้ได้ทุกขนาดจอ และใช้งานออฟไลน์ได้',
+        p3Tag1: 'คำศัพท์', p3Tag2: 'ใช้ออฟไลน์ได้',
+        aboutLabel: '02 / เกี่ยวกับฉัน', aboutH2a: 'ขี้สงสัยโดยนิสัย', aboutH2b: 'นักสร้างโดยธรรมชาติ',
+        aboutDesc: 'ชอบสลับไปมาระหว่างงาน frontend และ backend เรียนรู้เทคโนโลยีใหม่ ๆ และเปลี่ยนงานซ้ำ ๆ ให้กลายเป็นเครื่องมือที่มีประโยชน์ เชื่อว่าซอฟต์แวร์ที่ดีควรชัดเจน ใช้งานได้จริง และใช้แล้วรู้สึกดี',
+        stackLabel: 'เทคโนโลยี',
+        contactLabel: '03 / ติดต่อออนไลน์', contactH2a: 'มาสร้างอะไรที่มีประโยชน์', contactH2b: 'ไปด้วยกัน',
+        contactDesc: 'อยากดูโค้ด ติดตามสิ่งที่กำลังสร้าง หรือแค่แวะมาทักทายก็ได้', contactBtn: 'ติดต่อทาง GitHub',
+        builtWith: 'สร้างด้วยความอยากรู้', backTop: 'กลับขึ้นด้านบน',
+      },
+    };
+    const langToggle = document.getElementById('lang-toggle');
+    function pickLang() {
+      try {
+        const saved = localStorage.getItem('lang');
+        if (saved === 'th' || saved === 'en') return saved;
+      } catch {}
+      return (navigator.language || '').toLowerCase().startsWith('th') ? 'th' : 'en';
+    }
+    function setLang(lang) {
+      const d = I18N[lang];
+      document.documentElement.lang = lang;
+      document.title = d.title;
+      document.querySelectorAll('[data-i18n]').forEach(el => { if (d[el.dataset.i18n] != null) el.textContent = d[el.dataset.i18n]; });
+      document.querySelectorAll('[data-i18n-aria]').forEach(el => { if (d[el.dataset.i18nAria] != null) el.setAttribute('aria-label', d[el.dataset.i18nAria]); });
+      langToggle.setAttribute('aria-label', d.switchTo);
+      langToggle.querySelectorAll('[data-l]').forEach(s => s.classList.toggle('on', s.dataset.l === lang));
+    }
+    let lang = pickLang();
+    setLang(lang);
+    langToggle.addEventListener('click', () => {
+      lang = lang === 'th' ? 'en' : 'th';
+      try { localStorage.setItem('lang', lang); } catch {}
+      setLang(lang);
+    });
+
     document.getElementById('year').textContent = new Date().getFullYear();
     const revealItems = document.querySelectorAll('.reveal');
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
